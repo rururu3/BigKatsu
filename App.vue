@@ -52,11 +52,11 @@
       app.root.addChild(light);
 
       // set up initial positions and orientations
-      camera.setPosition(0, 50, 0);
-      camera.setEulerAngles(-90, 0, 0);
+      camera.setPosition(0, 30, 0);
+      camera.setEulerAngles(-90, 180, 0);
 
       // 
-      light.setPosition(0, 50, 0);
+      light.setPosition(0, 30, 0);
       light.setEulerAngles(0, 0, 0);
 
       // load model
@@ -70,7 +70,9 @@
 
       // register a global update event
       app.on('update', function (deltaTime) {
-        app.root.findByPath('BigKatsu').rotate(10 * deltaTime, 20 * deltaTime, 30 * deltaTime);
+        if(app.root.findByPath('BigKatsu')) {
+          app.root.findByPath('BigKatsu').rotate(10 * deltaTime, 20 * deltaTime, 30 * deltaTime);
+        }
       });
     },
   }
