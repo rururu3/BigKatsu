@@ -12,7 +12,7 @@
   export default {
     data() {
       return({
-        title: 'Hello World!',
+        title: 'ビッグカツがくるくる回るだけのページ',
       });
     },
     mounted: function() {
